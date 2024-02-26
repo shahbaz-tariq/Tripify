@@ -2,7 +2,8 @@ package com.legendarysz.tripify.Domains
 
 import java.io.Serializable
 
-data class ItemsDomain(
+//PopularDomain.kt
+data class PopularDomain(
     val title: String,
     val location: String,
     val description: String,
