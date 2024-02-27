@@ -1,9 +1,12 @@
 package com.legendarysz.tripify.Activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.legendarysz.tripify.Adapters.CategoryAdapter
 import com.legendarysz.tripify.Adapters.PopularAdapter
 import com.legendarysz.tripify.Domains.CategoryDomain
@@ -37,6 +40,13 @@ class MainActivity : AppCompatActivity() {
             PopularDomain("Popular Item 2", "Hawaii Beach", "Description 2", 3, false, 4.8, "pic2", false, 150),
             PopularDomain("Popular Item 3", "France", "Description 3", 1, true, 5.0, "pic3", true, 120)
         )
+
+        val btn: FloatingActionButton = findViewById(R.id.fab)
+
+        btn.setOnClickListener{
+            val intent = Intent(this, DetailsActivity::class.java)
+            startActivity(intent)
+        }
 
         val popularRecyclerView: RecyclerView = findViewById(R.id.view_pop)
         val popularAdapter = PopularAdapter(this, popularList)
