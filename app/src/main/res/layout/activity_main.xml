@@ -48,8 +48,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Welcome Back!"
                     android:textColor="@color/white"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/ivProfile"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -58,6 +60,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="serif"
                     android:text="LegendarySZ"
                     android:textColor="@color/white"
                     android:textSize="27sp"
@@ -77,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_bold"
                     android:text="Discover the Best Places\nto Travel"
                     android:textColor="@color/white"
                     android:textSize="28sp"
@@ -93,6 +97,7 @@
                     android:background="@drawable/search_background"
                     android:drawableStart="@drawable/search_icon"
                     android:drawablePadding="16dp"
+                    android:fontFamily="@font/poppins"
                     android:hint="Search Location"
                     android:inputType="text"
                     android:paddingStart="16dp"
@@ -140,10 +145,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="serif"
                     android:text="Popular"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -151,6 +157,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="serif"
                     android:text="See all"
                     android:textColor="@color/orange"
                     android:textSize="16sp"
@@ -185,10 +192,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="serif"
                     android:text="Categories"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -196,6 +204,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="serif"
                     android:text="See all"
                     android:textColor="@color/orange"
                     android:textSize="16sp"
