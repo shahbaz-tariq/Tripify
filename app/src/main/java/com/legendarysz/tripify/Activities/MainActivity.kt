@@ -36,17 +36,10 @@ class MainActivity : AppCompatActivity() {
 
         // Dummy data for PopularAdapter
         val popularList = listOf(
-            PopularDomain("Popular Item 1", "Miami Beach", "Description 1", 2, true, 4.5, "pic1", true, 100),
-            PopularDomain("Popular Item 2", "Hawaii Beach", "Description 2", 3, false, 4.8, "pic2", false, 150),
-            PopularDomain("Popular Item 3", "France", "Description 3", 1, true, 5.0, "pic3", true, 120)
+            PopularDomain("Mar Caible, Avendia Lago", "Miami Beach", "This 2 bed / 1 bath home boasts an enormous,living plan, accented by striking architectural features and high-end finsihes.", 2, true, 4.5, "pic1", true, 1000),
+            PopularDomain("Passo Rolle, TN", "Hawaii Beach", "Feel inspired by open sight lines that embrace the ourdoors, crowned by stunning coffered ceilings.", 3, false, 4.8, "pic2", false, 1500),
+            PopularDomain("Lal Qila", "France", "This 2 bed / 1 bath home boasts an enormous,living plan, accented by striking architectural features and high-end finsihes.Feel inspired by open sight lines that embrace the ourdoors, crowned by stunning coffered ceilings.", 1, true, 5.0, "pic3", true, 1200)
         )
-
-        val btn: FloatingActionButton = findViewById(R.id.fab)
-
-        btn.setOnClickListener{
-            val intent = Intent(this, DetailsActivity::class.java)
-            startActivity(intent)
-        }
 
         val popularRecyclerView: RecyclerView = findViewById(R.id.view_pop)
         val popularAdapter = PopularAdapter(this, popularList)

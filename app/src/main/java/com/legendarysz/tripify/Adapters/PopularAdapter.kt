@@ -1,6 +1,7 @@
 package com.legendarysz.tripify.Adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners
+import com.legendarysz.tripify.Activities.DetailsActivity
 import com.legendarysz.tripify.Domains.PopularDomain
 import com.legendarysz.tripify.R
 import java.text.DecimalFormat
@@ -17,8 +19,6 @@ import java.text.DecimalFormat
 //PopularAdapter
 class PopularAdapter(private val context: Context, private val popularList: List<PopularDomain>) :
     RecyclerView.Adapter<PopularAdapter.ViewHolder>() {
-
-    private val formatter: DecimalFormat = DecimalFormat("###,###,###,###")
 
     // ViewHolder class
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -49,6 +49,12 @@ class PopularAdapter(private val context: Context, private val popularList: List
             .load(drawableResourceId)
             .transform(CenterCrop(),GranularRoundedCorners(40F,40F,40F,40F))
             .into(holder.picImg)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context,DetailsActivity::class.java)
+            intent.putExtra("object",popularItem)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     // Return the size of the dataset
